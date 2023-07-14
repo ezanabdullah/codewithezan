@@ -86,4 +86,8 @@ func main() {
 	fmt.Println("InterfaceExample", interfaceExample)
 	interfaceExample = false
 	fmt.Println("InterfaceExample", interfaceExample)
+	var ezanaddress *Student
+	ezanaddress = &student
+	fmt.Println(ezanaddress)
+
 }
