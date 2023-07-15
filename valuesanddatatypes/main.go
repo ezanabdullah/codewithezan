@@ -37,4 +37,5 @@ func main() {
 	//types of declaration
 	number12 := 123
 	fmt.Println(number12)
+
 }
