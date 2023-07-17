@@ -3,22 +3,17 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("the sum is", add(4, 5, 6))
-	//anonymous functions
-	func(a int) int {
-		fmt.Println("anonymous func is running")
-		return 0
-	}(55)
-}
+	a := 10
+	b := 20
+	c := 30
+	fmt.Println("the sum is", add(&a, &b, &c))
 
-//1st way variadic function
-func add(b ...int) int {
-	sum := 0
-	for _, val := range b {
-		sum = sum + val
+}
+func add(b ...*int) int {
+	var sum *int
+	var val *int
+	for _, val = range b {
+		*sum = *sum + *val
 	}
-	return sum
-
+	return *sum
 }
-
-//Anonymous Function
